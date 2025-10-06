@@ -11,7 +11,7 @@ Persist computed Eloquent attributes in a JSON column for reuse across requests.
 
 - **100% Backward Compatible**: Unannotated accessors work exactly as before
 - **Opt-in Persistence**: Add `#[Materialized('key')]` to any accessor for automatic persistence
-- **Single JSON Column**: All materialized values stored in one configurable column
+- **Single JSON Column**: All materialized values stored in one JSON column
 - **No External Dependencies**: No Redis, separate tables, or observers required
 - **Selective Invalidation**: Clear specific attributes or all at once
 
@@ -23,21 +23,6 @@ Install the package via composer:
 composer require therecluse26/laravel-materialized-attributes
 ```
 
-Optionally publish the config file:
-
-```bash
-php artisan vendor:publish --tag="materialized-config"
-```
-
-This will publish a config file at `config/materialized.php`:
-
-```php
-<?php
-
-return [
-    'column' => 'materialized',
-];
-```
 
 ## Usage
 
@@ -175,14 +160,6 @@ class User extends Model
         return 'computed_data';
     }
 }
-```
-
-Or globally via config in `config/materialized.php` (though per-model override is recommended):
-
-```php
-return [
-    'column' => 'computed_data',
-];
 ```
 
 Generate migration with custom column name:

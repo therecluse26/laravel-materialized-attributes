@@ -10,12 +10,6 @@ class MaterializedAttributesServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->publishes([
-            __DIR__.'/../config/materialized.php' => config_path('materialized.php'),
-        ], 'config');
-
-        $this->mergeConfigFrom(__DIR__.'/../config/materialized.php', 'materialized');
-
         if ($this->app->runningInConsole()) {
             $this->commands([
                 AddMaterializedColumnCommand::class,
