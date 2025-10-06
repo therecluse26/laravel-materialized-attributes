@@ -1,0 +1,14 @@
+vendor/
+.phpunit.cache
+composer.lock
+.DS_Store
+.idea
+.vscode
+*.cache
+.phpunit.result.cache
+phpunit.xml.bak
+.env
+docs/.vuepress/dist/
+*.sqlite
+CLAUDE.md
+build/
