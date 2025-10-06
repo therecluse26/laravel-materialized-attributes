@@ -1,9 +1,9 @@
 # Laravel Materialized Attributes
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-materialized-attributes.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-materialized-attributes)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-materialized-attributes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/laravel-materialized-attributes/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-materialized-attributes/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/spatie/laravel-materialized-attributes/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-materialized-attributes.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-materialized-attributes)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/therecluse26/laravel-materialized-attributes.svg?style=flat-square)](https://packagist.org/packages/therecluse26/laravel-materialized-attributes)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/therecluse26/laravel-materialized-attributes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/therecluse26/laravel-materialized-attributes/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/therecluse26/laravel-materialized-attributes/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/therecluse26/laravel-materialized-attributes/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/therecluse26/laravel-materialized-attributes.svg?style=flat-square)](https://packagist.org/packages/therecluse26/laravel-materialized-attributes)
 
 Persist computed Eloquent attributes in a JSON column for reuse across requests. This package allows you to materialize expensive computed attributes without changing how you access them.
 
@@ -20,7 +20,7 @@ Persist computed Eloquent attributes in a JSON column for reuse across requests.
 Install the package via composer:
 
 ```bash
-composer require spatie/laravel-materialized-attributes
+composer require therecluse26/laravel-materialized-attributes
 ```
 
 Optionally publish the config file:
@@ -68,7 +68,7 @@ Schema::table('users', function (Blueprint $table) {
 Add the `Materializable` trait to your model:
 
 ```php
-use Spatie\MaterializedAttributes\Traits\Materializable;
+use TheRecluse26\MaterializedAttributes\Traits\Materializable;
 
 class User extends Model
 {
@@ -98,7 +98,7 @@ $user->full_name; // John Doe (computed again)
 #### Materialized Accessors (Persisted)
 
 ```php
-use Spatie\MaterializedAttributes\Attributes\Materialized;
+use TheRecluse26\MaterializedAttributes\Attributes\Materialized;
 
 #[Materialized('profile_summary')]
 public function getProfileSummaryAttribute(): array
@@ -236,7 +236,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Spatie](https://github.com/spatie)
+- [TheRecluse26](https://github.com/therecluse26)
 - [All Contributors](../../contributors)
 
 ## License
